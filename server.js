@@ -9,7 +9,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
-const { locations, reviews } = require('./controllers');
+// const { locations, reviews } = require('./controllers');
 
 ///////////////////////////////
 // DATABASE CONNECTION
