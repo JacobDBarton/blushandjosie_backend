@@ -8,7 +8,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
-// const { earrings, reviews } = require('./controllers');
+const { reviews } = require('./controllers');
 
 ///////////////////////////////
 // DATABASE CONNECTION
@@ -31,32 +31,7 @@ app.use(express.json());
 // ///////////////////////////////
 // // REGISTER CONTROLLERS
 // ////////////////////////////////
-// app.use('/earrings', earrings);
-// app.use('/reviews', reviews);
-
-///////////////////////////////
-// ROUTES
-////////////////////////////////
-
-//home route for testing our app
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
-// route for retrieving collection of earrings
-app.get("/collections", (req, res) => {
-  res.json(collections);
-});
-
-// route for retrieving one product from collection
-app.get("/show", (req, res) => {
-  res.json(show);
-});
-
-// route for cart page
-app.get("/cart", (req, res) => {
-  res.json(cart);
-});
+app.use('/reviews', reviews);
 
 ///////////////////////////////
 // LISTENER

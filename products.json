@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "Black and White Marbled Moon Phase Arches",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/image_905f31ee-70d5-438c-bb0e-bedfa13d18a1_1080x.jpg?v=1639001046",
+      "price": "18.00"
+    },
+    {
+      "id": 2,
+      "name": "Checkered Statement Studs, Orange and Silver",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/image_3f306387-4c74-4f8e-8640-33e0189c492c_1080x.jpg?v=1639001001",
+      "price": "15.00"
+    },
+    {
+      "id": 3,
+      "name": "Pink Abstract Circles",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/image_e8b67e60-bd39-4c8f-b14f-9b3b098cf050_1080x.jpg?v=1639001277",
+      "price": "22.00"
+    },
+    {
+      "id": 4,
+      "name": "Tan Circle Dangle w/ Single Daisy",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/tandaisydangle1_1080x.jpg?v=1649283880",
+      "price": "33.00"
+    },
+    {
+      "id": 5,
+      "name": "Tulip Dangles",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/whitetulip1_1080x.jpg?v=1649283400",
+      "price": "38.00"
+    },
+    {
+      "id": 6,
+      "name": "Tan Arches w/ Daisies",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/archdaisy1_1080x.jpg?v=1649283801",
+      "price": "33.00"
+    },
+    {
+      "id": 7,
+      "name": "Flower Bouquet Dangles",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/bouqet1_1080x.jpg?v=1649284653",
+      "price": "30.00"
+    },
+    {
+      "id": 8,
+      "name": "Blue Daisy Dangles",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/bluedaisydangle1_1080x.jpg?v=1649284274",
+      "price": "30.00"
+    },
+    {
+      "id": 9,
+      "name": "Retro Two-Toned Circle Dangles",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/retrogreen1_1080x.jpg?v=1649284058",
+      "price": "35.00"
+    },
+    {
+      "id": 10,
+      "name": "Vinyl Record earrings",
+      "image": "https://cdn.shopify.com/s/files/1/0415/5047/9512/products/recordplayer1_1080x.jpg?v=1649284197",
+      "price": "40.00"
+    }
+  ]
