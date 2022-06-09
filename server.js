@@ -8,7 +8,6 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
-const { reviews } = require('./controllers');
 
 ///////////////////////////////
 // DATABASE CONNECTION
@@ -28,10 +27,65 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-// ///////////////////////////////
-// // REGISTER CONTROLLERS
-// ////////////////////////////////
-app.use('/reviews', reviews);
+const ProductSchema = new mongoose.Schema({
+  name: String,
+  image: String,
+  title: String,
+},
+{
+  timestamps: true
+});
+
+const Product = mongoose.model("Product", ProductSchema);
+
+///////////////////////////////
+// ROUTES
+///////////////////////////////
+app.get("/", (req, res) => {
+  res.send("Blush & Josie");
+});
+
+
+app.get("/product", async (req, res) => {
+  try {
+
+    res.json(await Product.find({}));
+  } catch (error) {
+    //send error
+    res.status(400).json(error);
+  }
+});
+
+
+app.post("/product", async (req, res) => {
+  try {
+
+    res.json(await Product.create(req.body));
+  } catch (error) {
+
+    res.status(400).json(error);
+  }
+});
+
+
+app.put("/product/:id", async (req, res) => {
+  try {
+    res.json(
+      await Product.findByIdAndUpdate(req.params.id, req.body)
+    );
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+app.delete("/product/:id", async (req, res) => {
+  try {
+    res.json(await Product.findByIdAndRemove(req.params.id));
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
 
 ///////////////////////////////
 // LISTENER
