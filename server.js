@@ -27,14 +27,16 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-const ProductSchema = new mongoose.Schema({
-  name: String,
-  image: String,
-  title: String,
-},
-{
-  timestamps: true
-});
+const ProductSchema = new mongoose.Schema(
+  {
+    name: String,
+    image: String,
+    price: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
 const Product = mongoose.model("Product", ProductSchema);
 
@@ -45,10 +47,8 @@ app.get("/", (req, res) => {
   res.send("Blush & Josie");
 });
 
-
 app.get("/product", async (req, res) => {
   try {
-
     res.json(await Product.find({}));
   } catch (error) {
     //send error
@@ -56,23 +56,26 @@ app.get("/product", async (req, res) => {
   }
 });
 
-
 app.post("/product", async (req, res) => {
   try {
-
     res.json(await Product.create(req.body));
   } catch (error) {
-
     res.status(400).json(error);
   }
 });
 
+app.get("/product/:id", async (req, res) => {
+  try {
+    res.json(await Product.findById(req.params.id));
+  } catch (error) {
+    //send error
+    res.status(400).json(error);
+  }
+});
 
 app.put("/product/:id", async (req, res) => {
   try {
-    res.json(
-      await Product.findByIdAndUpdate(req.params.id, req.body)
-    );
+    res.json(await Product.findByIdAndUpdate(req.params.id, req.body));
   } catch (error) {
     res.status(400).json(error);
   }
@@ -85,7 +88,6 @@ app.delete("/product/:id", async (req, res) => {
     res.status(400).json(error);
   }
 });
-
 
 ///////////////////////////////
 // LISTENER
